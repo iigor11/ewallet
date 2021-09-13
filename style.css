@@ -9,10 +9,16 @@
   font-weight: 300;
 }
 
+@keyframes fadein{
+  from{opacity: 0;}
+  to  {opacity: 1; }
+}
+
 body {
   background-color: #f0f2f5;
   height: 100vh;
   position: relative;
+  animation: fadein 1s;
 }
 
 .content {
@@ -22,7 +28,7 @@ body {
 }
 
 #popupbackground {
-  background-color: #000000c0;
+  background-color: rgba(0, 0, 0, 0.726);
   width: 100vw;
   height: 100vh;
   z-index: 5;
@@ -39,7 +45,6 @@ body {
   background-color: #f0f2f5;
   margin: auto;
 }
-
 #popup form{
   display: flex;
   align-items: initial;
@@ -56,14 +61,14 @@ body {
   text-align: end;
 }
 
-form input, form select, form button{
+form input, form select, form button {
   padding: 10px;
   border-radius: 5px;
   margin: auto 5px;
   margin-top: 10px;
   flex:1;
   border: 1px solid transparent;
-  transition: border-color linear 0.2s;
+  transition: border-color linear 0.3s;
 }
 
 form input:focus,
@@ -80,18 +85,19 @@ form label{
 form button{
   background-color: #7c0061;
   color: #fff;
-  margin-top: 30px;
-  transition: background linear 0.3s;
+  margin-top:30px;
+  transition: background linear 0.2s;
 }
 
 form button:hover{
   background-color: #570044;
 }
 
+
 #header {
   width: 100%;
   height: 210px;
-  background-color: #6a0883;
+  background-color: #7c0061;
 }
 
 #header img {
@@ -101,6 +107,7 @@ form button:hover{
 #cards {
   display: flex;
   align-items: center;
+  margin-top: -100px;
 }
 
 .card {
@@ -109,19 +116,17 @@ form button:hover{
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  margin-top: -100px;
   margin-right: 20px;
 }
-
-.card-tittle {
+.card-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .in svg {
-  color: #12a45a;
+  color: #12a454;
 }
 
 .out svg {
@@ -129,7 +134,7 @@ form button:hover{
 }
 
 .total {
-  background-color: #302f2f;
+  background-color: #474747;
   color: #fff;
   margin-right: 0;
 }
@@ -143,13 +148,25 @@ table {
 
 thead {
   border-top: 16px solid transparent;
-  border-bottom: 16px solid transparent;
+  border-bottom: 8px solid transparent;
 }
 
 thead th {
   color: #969cb2;
   font-weight: 300;
   padding-left: 10px;
+}
+
+.green{
+  color: #12a454;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.red{
+  color: #e83f5b;
+  font-weight: 400;
+  text-transform: capitalize;
 }
 
 tbody tr {
@@ -164,8 +181,8 @@ tbody tr td {
 }
 
 tbody td svg {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   margin-right: 5px;
 }
 
@@ -181,7 +198,7 @@ tbody td svg {
 
 #addButton a {
   color: #fff;
-  border-radius: 50%;
+  border-radius: 50%; /*Deixa qualquer elemento redondo*/
   padding: 15px;
   display: flex;
   align-items: center;
@@ -196,7 +213,7 @@ tbody td svg {
   bottom: 0;
   margin-right: 70px;
   margin-bottom: 50px;
-  transition: background 0.2s;
+  transition: background 2s;
 }
 
 #addButton:hover {
